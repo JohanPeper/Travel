@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --first-color: #F2785C;
+    --second-color: #0D606F;
+    --first-font: "Red Hat Text", 'san-serif';
+}
+
+* {
+    box-sizing: border-box;
+}
+
+* a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: var(--first-font);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: sticky;
+    height: 90px;
+    background-color: var(--first-color);
+    opacity: 0.7;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    width: 216px;
+    height: 32px;
+    background-image: url('./images/logo.svg');
+}
+
+nav {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    justify-content: space-between;
+    width: 527px;
+}
+
+.login {
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: var(--second-color);
+    font-family: var(--first-font);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+    color: #ffffff;
+    width: 103px;
+    height: 41px;
+}
