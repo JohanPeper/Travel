@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,66 @@
     <link rel="stylesheet" href="./style.css">
     <script defer src="./script.js"></script>
 </head>
+
 <body>
     <header>
-        <div class="logo"> 
+        <div class="stickyNav">
+            <div class="logo">
+            </div>
+            <nav>
+                <a href="#">How it Works</a>
+                <a href="#">Plan Your Trip</a>
+                <a href="#">Destinations</a>
+                <a href="#">Travel Stories</a>
+            </nav>
+            <button class="login">Login</button>
         </div>
-        <nav>
-            <a href="#"> How it Works</a>
-            <a href="#">Plan Your Trip</a>
-            <a href="#">Destinations</a>
-            <a href="#">Travel Stories</a>           
-        </nav>
-        <button class="login">Login</button>
+        <div class="planBox">
+            <h1>Explore the beauty of the World</h1>
+            <p>Receive personalized recommendations for countries, hotels, activities and more</p>
+            <form>
+                <textarea cols="40" rows="1" placeholder="What would you like to do?"></textarea>
+                <button>Start Planning</button>
+            </form>
+        </div>
     </header>
     <main>
+        <div class="steps">
+            <h2>3 STEPS TO THE PERFECT TRIP</h2>
+            <div>
+                <img src="./images/bike.svg" alt="Bike">
+                <p>Tell us what you want to do</p>
+            </div>
+            <div>
+                <img src="./images/calendar.svg" alt="Calendar">
+                <p>Share us preferable dates </p>
+            </div>
+            <div>
+                <img src="./images/airplane.svg" alt="Airplane">
+                <p>We will give you recommendations</p>
+            </div>
+        </div>
+        <div class="popularDestinations">
+            <h2>POPULAR DESTINATIONS</h2>
+            <div class="sliderContainer">
+                <div class="sliderImg">
+ 
+                </div>
+                <div class="sliderButton">
+                    <button class="prev"></button>
+                    <div class="activeCircle"></div>
+                    <button class="next"> </button>
+                </div>
+                
+            </div>
+            <button class="findMoreButton"><img src="./images/bi_arrow-right.png" alt="Arrow right">Find more</button>
+        </div>
 
     </main>
     <footer>
 
     </footer>
-    
+
 </body>
+
 </html>
