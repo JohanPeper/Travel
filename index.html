@@ -20,7 +20,7 @@
                 <a href="#">Destinations</a>
                 <a href="#">Travel Stories</a>
             </nav>
-            <button class="login">Login</button>
+            <button class="loginBtn">Login</button>
         </div>
         <div class="planBox">
             <h1>Explore the beauty of the World</h1>
@@ -29,6 +29,49 @@
                 <textarea cols="40" rows="1" placeholder="What would you like to do?"></textarea>
                 <button>Start Planning</button>
             </form>
+        </div>
+        <div class="bgHide"></div>
+        <div class="loginFormWrapper">
+            <div class="loginForm">
+                <form method="post" id="loginForm">
+                    <div class="loginTitle">Log in to your account</div>
+                    <button class="signFacebook"><img src="./images/Facebook Logo.svg"> Sign In with Facebook</button>
+                    <button class="signGoogle"><img src="./images/Google Logo.png">Sign In with Google</button>
+                    <div class="loginOrLine">
+                        <hr /> or
+                        <hr />
+                    </div>
+                    <fieldset>
+                        <legend>E-mail</legend>
+                        <input type="email" name="emailSignIn" id="emailSignIn">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Password</legend>
+                        <input type="password" name="passwordSignIn" id="passwordSignIn">
+                    </fieldset>
+                    <button type="submit" class="submitSignIn">Sign In</button>
+                    <a href="" class="forgotPassword">Forgot Your Password?</a>
+                    <hr class="bottomLoginBorder" />
+                    <div class="loginRegister">Don’t have an account? <a href="#" class="loginRegisterLink">Register</a>
+                    </div>
+                </form>
+            </div>
+            <div class="registerForm">
+                <form action="" method="post" id="registerForm">
+                    <div class="registerTitle">Create account</div>
+                    <fieldset>
+                        <legend>E-mail</legend>
+                        <input type="email" name="emailSignUp" id="emailSignUp">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Password</legend>
+                        <input type="password" name="passwordSignUp" id="passwordSignUp">
+                    </fieldset>
+                    <button type="submit" class="submitSignUp">Sign Up</button>
+                    <hr class="bottomRegisterBorder" />
+                    <div class="registerLogin">Already have an account? <a href="#" class="registerLoginLink">Log in</a>
+                </form>
+            </div>
         </div>
     </header>
     <main>
@@ -54,9 +97,9 @@
 
                 </div>
                 <div class="sliderButton">
-                    <button class="prev"></button>
-                    <div class="activeCircle"></div>
-                    <button class="next"> </button>
+                    <button class="firstSlide"></button>
+                    <button class="activeSlide secondSlide"></button>
+                    <button class="thirdSlide"></button>
                 </div>
 
             </div>
@@ -118,12 +161,12 @@
     </main>
     <footer>
         <div class="footerWrapper">
-        <span>All Rights Reserved © Travel Portal</span>
-        <div class="socialNetwork">  
-            <a href="" class="inst"></a>
-            <a href="" class="yourTube"></a>
-            <a href="" class="twitter"></a>
-        </div>
+            <span>All Rights Reserved © Travel Portal</span>
+            <div class="socialNetwork">
+                <a href="" class="inst"></a>
+                <a href="" class="yourTube"></a>
+                <a href="" class="twitter"></a>
+            </div>
         </div>
     </footer>
 
