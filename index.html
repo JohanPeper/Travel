@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="stickyNav">
+            <div class="logo">
+            </div>
+            <nav>
+                <a href="#" class="activePage">How it Works</a>
+                <a href="#">Plan Your Trip</a>
+                <a href="#">Destinations</a>
+                <a href="#">Travel Stories</a>
+            </nav>
+            <button class="loginBtn">Login</button>
+            <div class="burgerMenuBtn"></div>
+            <div class="burgerMenuPopUp">
+                <div class="closeBurgerMenu"></div>
+                <a href="#">How It Works</a>
+                <a href="#">Plan Your Trip</a>
+                <a href="#">Destinations</a>
+                <a href="#">Travel Stories</a>
+                <a href="#">Account</a>
+                <a href="#">Social Media</a>
+            </div>
+        </div>
+        <div class="planBox">
+            <h1>Explore the beauty of the World</h1>
+            <p>Receive personalized recommendations for countries, hotels, activities and more</p>
+            <form>
+                <textarea cols="40" rows="1" placeholder="What would you like to do?"></textarea>
+                <button>Start Planning</button>
+            </form>
+        </div>
+        <div class="bgHide"></div>
+        <div class="loginFormWrapper">
+            <div class="loginForm">
+                <form method="post" id="loginForm">
+                    <div class="loginTitle">Log in to your account</div>
+                    <button class="signFacebook"><img src="./images/Facebook Logo.svg"> Sign In with Facebook</button>
+                    <button class="signGoogle"><img src="./images/Google Logo.png">Sign In with Google</button>
+                    <div class="loginOrLine">
+                        <hr /> or
+                        <hr />
+                    </div>
+                    <fieldset>
+                        <legend>E-mail</legend>
+                        <input type="email" name="emailSignIn" id="emailSignIn">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Password</legend>
+                        <input type="password" name="passwordSignIn" id="passwordSignIn">
+                    </fieldset>
+                    <button type="submit" class="submitSignIn">Sign In</button>
+                    <a href="" class="forgotPassword">Forgot Your Password?</a>
+                    <hr class="bottomLoginBorder" />
+                    <div class="loginRegister">Don’t have an account? <a href="#" class="loginRegisterLink">Register</a>
+                    </div>
+                </form>
+            </div>
+            <div class="registerForm">
+                <form action="" method="post" id="registerForm">
+                    <div class="registerTitle">Create account</div>
+                    <fieldset>
+                        <legend>E-mail</legend>
+                        <input type="email" name="emailSignUp" id="emailSignUp">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Password</legend>
+                        <input type="password" name="passwordSignUp" id="passwordSignUp">
+                    </fieldset>
+                    <button type="submit" class="submitSignUp">Sign Up</button>
+                    <hr class="bottomRegisterBorder" />
+                    <div class="registerLogin">Already have an account? <a href="#" class="registerLoginLink">Log in</a>
+                </form>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="steps">
+            <h2>3 STEPS TO THE PERFECT TRIP</h2>
+            <div>
+                <img src="./images/bike.svg" alt="Bike">
+                <p>Tell us what you want to do</p>
+            </div>
+            <div>
+                <img src="./images/calendar.svg" alt="Calendar">
+                <p>Share us preferable dates </p>
+            </div>
+            <div>
+                <img src="./images/airplane.svg" alt="Airplane">
+                <p>We will give you recommendations</p>
+            </div>
+        </div>
+        <div class="popularDestinations">
+            <h2>POPULAR DESTINATIONS</h2>
+            <div class="sliderContainer">
+                <div class="sliderImg">
+
+                </div>
+                <div class="sliderButton">
+                    <button class="firstSlide"></button>
+                    <button class="activeSlide secondSlide"></button>
+                    <button class="thirdSlide"></button>
+                </div>
+                <div class="sliderButtonLowResolution">
+                    <div class="prevImgBtn"></div>
+                    <div class="nextImgBtn"></div>
+                </div>
+            </div>
+            <button class="findMoreButton"><img src="./images/bi_arrow-right.png" alt="Arrow right">Find More</button>
+        </div>
+        <div class="stories">
+            <h2>TRAVEL STORIES</h2>
+            <div class="Bg">
+                <img src="./images/storiesBg.jpg" alt="" class="storiesBg1440">
+                <img src="./images/storiesBgMini.jpg" alt="" class="storiesBg390">
+            </div>
+            <div class="storiesBlock">
+                <img src="./images/stories1.jpg" alt="River" class="storyImg1440">
+                <img src="./images/story1mini.jpg" alt="River" class="storyImg390">
+                <div class="story">
+                    <h3>10 Photos of Attractive Thailand</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor
+                        sit amet, consectetur adipiscing elit...</p>
+                    <a href="">Read More</a>
+                </div>
+                <img src="./images/stories2.jpg" alt="Road in canyon" class="storyImg1440">
+                <img src="./images/story2mini.jpg" alt="River" class="storyImg390">
+                <div class="story">
+                    <h3>Canyonlands National Park, Utah</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor
+                        sit amet, consectetur adipiscing elit...</p>
+                    <a href="">Read More</a>
+                </div>
+                <img src="./images/stories3.jpg" alt="Mountains" class="storyImg1440">
+                <img src="./images/story3mini.jpg" alt="River" class="storyImg390">
+                <div class="story">
+                    <h3>I left my heart in the Mountains!</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor
+                        sit amet, consectetur adipiscing elit...</p>
+                    <a href="">Read More</a>
+                </div>
+                <img src="./images/stories4.jpg" alt="Bus on road" class="storyImg1440">
+                <img src="./images/story4mini.jpg" alt="River" class="storyImg390">
+                <div class="story">
+                    <h3>The Longest journey in my life!</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor
+                        sit amet, consectetur adipiscing elit...</p>
+                    <a href="">Read More</a>
+                </div>
+
+            </div>
+            <button class="seeMoreButton"><img src="./images/bi_arrow-right.png" alt="Arrow right">See More</button>
+        </div>
+
+    </main>
+    <footer>
+        <div class="footerWrapper">
+            <span>All Rights Reserved © Travel Portal</span>
+            <div class="socialNetwork">
+                <a href="" class="inst"></a>
+                <a href="" class="yourTube"></a>
+                <a href="" class="twitter"></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
