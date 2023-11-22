@@ -32,6 +32,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
 button {
@@ -68,7 +69,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 4px 4px 0px var(--second-color-05);
-
+    z-index: 2;
 }
 
 .logo {
@@ -87,7 +88,6 @@ nav {
     justify-content: space-between;
     width: 567px;
     padding-right: 40px;
-
 }
 
 .activePage {
@@ -209,7 +209,7 @@ header {
 
 #emailSignIn,
 #passwordSignIn,
-.submitSignIn, 
+.submitSignIn,
 #emailSignUp,
 #passwordSignUp,
 .submitSignUp {
@@ -263,7 +263,7 @@ header {
     margin-top: 16px;
 }
 
-.loginRegister, 
+.loginRegister,
 .registerLogin {
     color: var(--second-color-05);
     text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
@@ -277,6 +277,46 @@ header {
     display: none;
 }
 
+.burgerMenuBtn {
+    width: 35px;
+    height: 32px;
+    display: none;
+    background-image: url('./images/eva_menu-outline.png');
+    cursor: pointer;
+}
+
+.burgerMenuPopUp {
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    width: 165px;
+    height: 250px;
+    background-color: var(--first-color);
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    padding-right: 15px;
+    padding-top: 9px;
+    padding-left: 9px;
+    padding-bottom: 30px;
+    gap: 10px;
+    z-index: 3;
+}
+
+.closeBurgerMenu {
+    width: 30px;
+    height: 30px;
+    background-image: url('./images/clarity_window-close-line.svg');
+    align-self: start;
+}
+
+.burgerMenuPopUp a {
+    font-size: 16px;
+    font-weight: 500;
+}
+
 .planBox {
     position: relative;
     left: 120px;
@@ -288,6 +328,7 @@ header {
     align-items: start;
     margin-top: 32px;
     padding-bottom: 33px;
+    z-index: 1;
 }
 
 .planBox h1 {
@@ -403,6 +444,13 @@ main {
     align-items: center;
 }
 
+.popularDestinations,
+.sliderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .sliderImg {
     width: 1440px;
     display: flex;
@@ -419,13 +467,6 @@ main {
     margin: 0 60px;
 }
 
-.popularDestinations,
-.sliderContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .sliderButton {
     width: 80px;
     display: flex;
@@ -438,10 +479,37 @@ main {
     width: 20px;
     height: 20px;
     box-shadow: none;
+    z-index: 2;
 }
 
 .activeSlide {
     opacity: 1 !important;
+}
+
+.sliderButtonLowResolution {
+    position: absolute;
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 20px;
+    margin: 90px;
+}
+
+.prevImgBtn {
+    width: 30px;
+    height: 30px;
+    background-image: url('./images/ep_arrow-up-bold.png');
+    transform: rotate(180deg);
+    display: inline-block;
+    cursor: pointer;
+}
+
+.nextImgBtn {
+    width: 30px;
+    height: 30px;
+    background-image: url('./images/ep_arrow-up-bold.png');
+    cursor: pointer;
 }
 
 .findMoreButton {
@@ -472,6 +540,10 @@ main {
     width: 1440px;
 }
 
+.storiesBg390 {
+    display: none;
+}
+
 .stories {
     margin-top: 65px;
     display: flex;
@@ -497,6 +569,10 @@ main {
 .storiesBlock img {
     border-radius: 16px;
     box-shadow: 0px 4px 4px 0px var(--second-color-05);
+}
+
+.storyImg390 {
+    display: none;
 }
 
 .story {
@@ -603,4 +679,466 @@ footer span {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+
+@media screen and (max-width: 1440px) {
+    header {
+        width: 100%;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    .stickyNav {
+        padding: 0 5%;
+    }
+
+    .planBox {
+        left: 5%;
+    }
+
+    .steps {
+        width: 100%;
+        margin: 80px 0 112px;
+        padding: 0 3%;
+    }
+
+    .stories {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .story p {
+        margin-top: 5px;
+    }
+
+    .storiesBlock {
+        grid-template-columns: 30% auto;
+        column-gap: 2%;
+        row-gap: 2%;
+        padding: 3%;
+        height: 1170px;
+    }
+
+    .storiesBlock img {
+        width: 100%;
+        height: 90%;
+    }
+
+    ;
+
+    footer {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .footerWrapper {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 980px) {
+    nav {
+        width: auto;
+        padding-right: 0;
+        gap: 15px;
+    }
+
+    .planBox {
+        width: 90%;
+    }
+
+    .steps {
+        grid-template-columns: 94px 160px 98px;
+    }
+
+    .steps p {
+        font-size: 14px;
+    }
+
+    .steps div:nth-child(3) {
+        left: 0;
+    }
+
+
+
+}
+
+@media screen and (max-width: 874px) {
+    header {
+        height: 450px;
+    }
+
+    .logo {
+        background-image: url('./images/logoMini.png');
+        width: 30px;
+    }
+
+    .planBox textarea {
+        width: 70%;
+    }
+
+    .planBox h1 {
+        font-size: 50px;
+    }
+
+    .planBox {
+        height: 300px;
+    }
+
+    .steps img {
+        width: 70px;
+        height: 70px;
+        padding: 15px 15px;
+        object-fit: contain;
+    }
+
+    .sliderImg {
+        width: 900px;
+    }
+
+    .sliderImg img {
+        height: 500px;
+        width: 500px;
+    }
+
+    .storiesBlock h3 {
+        font-size: 22px;
+    }
+
+    .storiesBlock p {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 660px) {
+    .stickyNav {
+        background-color: inherit;
+        box-shadow: none;
+        background: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0.00) 50.1%);
+    }
+
+    nav {
+        display: none;
+    }
+
+    .loginBtn {
+        display: none;
+    }
+
+    .burgerMenuBtn {
+        display: block;
+    }
+
+    .planBox button {
+        width: 92px;
+        height: 30px;
+        font-size: 11px;
+    }
+
+    .planBox form {
+        height: 65px;
+    }
+
+    .steps h2 {
+        font-size: 24px;
+    }
+
+    .sliderImg {
+        width: 660px;
+    }
+
+    .sliderImg img {
+        height: 365px;
+        width: 365px;
+    }
+
+    .findMoreButton {
+        width: 92px;
+        height: 30px;
+        font-size: 11px;
+    }
+
+    .findMoreButton img {
+        width: 10px;
+        height: 10px;
+        margin-right: 6px;
+    }
+
+    .popularDestinations h2 {
+        font-size: 24px;
+    }
+
+    .stories h2 {
+        font-size: 24px;
+    }
+
+    .stories p {
+        font-size: 14px;
+    }
+
+    .storiesBlock img {
+        height: 65%;
+    }
+
+    .seeMoreButton {
+        width: 92px;
+        height: 30px;
+        font-size: 11px;
+    }
+
+    .seeMoreButton img {
+        width: 10px;
+        height: 10px;
+        margin-right: 6px;
+    }
+
+    .stories {
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 476px) {
+    header {
+        height: 251px;
+    }
+
+    .planBox h1,
+    .planBox p {
+        display: none;
+    }
+
+    .stickyNav {
+        height: 75px;
+        padding: 0 3.85%;
+        align-items: end;
+    }
+
+    .logo {
+        margin-bottom: 0;
+    }
+
+    .burgerMenuBtn {
+        margin-right: 5px;
+    }
+
+    .planBox {
+        left: 3.85%;
+        width: 92.3%;
+        height: 48px;
+        padding: 0;
+        margin-top: 67px;
+    }
+
+    .planBox form {
+        height: 48px;
+        padding-right: 9px;
+        padding-left: 15px;
+    }
+
+    .planBox textarea {
+        font-size: 14px;
+        letter-spacing: -0.5px;
+    }
+
+    .steps {
+        margin: 20px 0 20px;
+        padding: 0 15px;
+        grid-template-columns: 94px 111px 98px;
+        row-gap: 20px;
+
+    }
+
+    .steps p {
+        font-size: 10px;
+        margin-top: 20px;
+        letter-spacing: -0.16px;
+    }
+
+    .steps h2 {
+        font-size: 14px;
+    }
+
+    .steps div:nth-child(2) {
+        align-items: start;
+    }
+
+    .steps div:nth-child(2) img {
+        padding: 19.25px 15px;
+    }
+
+    .steps div:nth-child(3) {
+        left: 2px;
+    }
+
+    .steps div:nth-child(3) img {
+        padding: 17.5px;
+    }
+
+    .steps div:nth-child(4) {
+        align-items: end;
+        text-align: right;
+    }
+
+    .steps div:nth-child(4) img {
+        padding: 17.5px 15px;
+    }
+
+    .popularDestinations h2 {
+        font-size: 14px;
+    }
+
+    .sliderImg {
+        width: 648px;
+        margin: 20px 0 -20px 0;
+    }
+
+    .sliderImg img {
+        height: 210px;
+        width: 360px;
+        border-radius: 16px;
+    }
+
+    .sliderButtonLowResolution {
+        display: flex;
+    }
+
+    .sliderButton {
+        width: 36px;
+    }
+
+    .sliderButton button {
+        width: 8px;
+        height: 8px;
+    }
+
+    .findMoreButton {
+        margin-top: 22px;
+    }
+
+    .storyImg390 {
+        display: block;
+    }
+
+    .storyImg1440 {
+        display: none;
+    }
+
+    .stories {
+        margin-top: 20px;
+        padding-bottom: 13px;
+    }
+
+    .stories h2 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .storiesBlock {
+        width: 390px;
+        height: 585px;
+        align-items: start;
+        padding: 10px 15px 13px;
+        grid-template-columns: 155px 195px;
+        row-gap: 15px;
+        column-gap: 10px;
+    }
+
+    .storiesBlock img {
+        height: 130px;
+    }
+
+    .story {
+        height: 127px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 0px;
+    }
+
+    .story p {
+        overflow: hidden;
+        font-size: 9px;
+        width: 195px;
+        height: 127px;
+        -webkit-line-clamp: 8;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        margin-top: 10px;
+        letter-spacing: -0.07px;
+    }
+
+    .story h3 {
+        font-size: 11px;
+        font-weight: 700;
+        margin-top: 5px;
+        letter-spacing: -0.19px;
+    }
+
+    .story a {
+        font-size: 9px;
+        text-underline-offset: 0.5px;
+        padding-top: 1px;
+    }
+
+    .Bg img {
+        height: 700px;
+    }
+
+    .footerWrapper span {
+        display: none;
+    }
+
+    .footerWrapper {
+        justify-content: center;
+    }
+
+    .socialNetwork {
+        margin-left: 9px;
+        margin-top: 4px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    header {
+        background-image: url('./images/garrett-parker-DlkF4-dbCOU-unsplash\ 2.jpg');
+    }
+
+    .Bg {
+        width: 390px;
+        height: 0px;
+    }
+
+    .Bg img {
+        width: 390px;
+        height: auto;
+    }
+
+    .storiesBg1440 {
+        display: none;
+    }
+
+    .storiesBg390 {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 10px) {
+    header {
+        width: 100%;
+    }
 }
