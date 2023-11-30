@@ -24,6 +24,9 @@
 
 html {
     scroll-behavior: smooth;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -33,6 +36,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    background-color: #FFF;
 }
 
 button {
@@ -101,6 +105,11 @@ nav {
     font-size: 16px;
     width: 103px;
     height: 41px;
+    transition: 1s linear;
+}
+
+.loginBtn:hover {
+    color: var(--first-color-07);
 }
 
 header {
@@ -120,6 +129,7 @@ header {
     top: 0;
     z-index: 2;
     display: none;
+    overflow-y: hidden;
 }
 
 .loginFormWrapper {
@@ -303,6 +313,34 @@ header {
     padding-bottom: 30px;
     gap: 10px;
     z-index: 3;
+    white-space: nowrap;
+    overflow: hidden;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes ani {
+    0% {
+        right: -50px;
+        width: 0;
+    }
+
+    100% {
+        right: 5%;
+        width: 165px;
+    }
+}
+
+@keyframes closeAni {
+    0% {
+        right: 5%;
+        width: 165px;
+    }
+
+    100% {
+        right: -50px;
+        width: 0;
+    }
 }
 
 .closeBurgerMenu {
@@ -310,6 +348,7 @@ header {
     height: 30px;
     background-image: url('./images/clarity_window-close-line.svg');
     align-self: start;
+    cursor: pointer;
 }
 
 .burgerMenuPopUp a {
@@ -691,6 +730,8 @@ footer span {
     }
 
     body {
+        width: 100%;
+        max-width: 100%;
         overflow-x: hidden;
     }
 
@@ -917,6 +958,63 @@ footer span {
         height: 251px;
     }
 
+    .loginForm {
+        width: 250px;
+        height: 450px;
+    }
+    .loginForm form, .registerForm form{
+        justify-content: center;
+    }
+
+    .loginTitle, .registerTitle {
+        font-size: 14px;
+    }
+
+    .forgotPassword, .loginRegisterLink, .registerLoginLink{
+        font-size: 11px;
+    }
+
+    .forgotPassword{
+        margin-top: 7px;
+    }
+
+    .loginRegister, .registerLogin{
+        font-size: 11px;
+    }
+
+    .signFacebook,
+    .signGoogle,
+    .submitSignIn,
+    #emailSignIn,
+    #passwordSignIn,
+    .submitSignIn,
+    #emailSignUp,
+    #passwordSignUp,
+    .submitSignUp {
+        width: 200px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .loginOrLine {
+        font-size: 12px;
+        width: 200px;
+
+    }
+
+    .loginOrLine hr {
+        width: 100px;
+    }
+
+    .bottomLoginBorder, .bottomRegisterBorder {
+        width: 200px;
+    }
+
+    .registerForm {
+        width: 250px;
+        height: 320px;
+    }
+
     .planBox h1,
     .planBox p {
         display: none;
@@ -1137,8 +1235,26 @@ footer span {
     }
 }
 
-@media screen and (max-width: 10px) {
-    header {
-        width: 100%;
+@media screen and (max-width: 320px) {
+    .steps {
+        padding: 0 5px;
+    }
+
+    .sliderImg {
+        width: 540px;
+    }
+
+    .sliderImg img {
+        width: 300px;
+    }
+
+    .storiesBlock {
+        width: 320px;
+        grid-template-columns: 120px 180px;
+        padding: 5px;
+    }
+
+    .story p {
+        width: 180px;
     }
 }

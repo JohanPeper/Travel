@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="zxx" class="html">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/logoMini.png" type="image/svg+xml">
     <title>Travel</title>
     <link rel="stylesheet" href="./style.css">
     <script defer src="./script.js"></script>
@@ -16,23 +17,23 @@
             </div>
             <nav>
                 <a href="#" class="activePage">How it Works</a>
-                <a href="#">Plan Your Trip</a>
-                <a href="#">Destinations</a>
-                <a href="#">Travel Stories</a>
+                <a href="#preview">Plan Your Trip</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#stories">Travel Stories</a>
             </nav>
             <button class="loginBtn">Login</button>
             <div class="burgerMenuBtn"></div>
             <div class="burgerMenuPopUp">
                 <div class="closeBurgerMenu"></div>
                 <a href="#">How It Works</a>
-                <a href="#">Plan Your Trip</a>
-                <a href="#">Destinations</a>
-                <a href="#">Travel Stories</a>
-                <a href="#">Account</a>
-                <a href="#">Social Media</a>
+                <a href="#preview">Plan Your Trip</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#stories">Travel Stories</a>
+                <a href="#" class="accountBtn">Account</a>
+                <a href="#footer">Social Media</a>
             </div>
         </div>
-        <div class="planBox">
+        <div class="planBox" id="preview">
             <h1>Explore the beauty of the World</h1>
             <p>Receive personalized recommendations for countries, hotels, activities and more</p>
             <form>
@@ -45,11 +46,13 @@
             <div class="loginForm">
                 <form method="post" id="loginForm">
                     <div class="loginTitle">Log in to your account</div>
-                    <button class="signFacebook"><img src="./images/FacebookLogo.svg" alt="Facebook"> Sign In with Facebook</button>
-                    <button class="signGoogle"><img src="./images/GoogleLogo.png" alt="Google">Sign In with Google</button>
+                    <button class="signFacebook"><img src="./images/FacebookLogo.svg" alt="Facebook"> Sign In with
+                        Facebook</button>
+                    <button class="signGoogle"><img src="./images/GoogleLogo.png" alt="Google">Sign In with
+                        Google</button>
                     <div class="loginOrLine">
-                        <hr > or
-                        <hr >
+                        <hr> or
+                        <hr>
                     </div>
                     <fieldset>
                         <legend>E-mail</legend>
@@ -60,7 +63,7 @@
                         <input type="password" name="passwordSignIn" id="passwordSignIn">
                     </fieldset>
                     <button type="submit" class="submitSignIn">Sign In</button>
-                    <a href="" class="forgotPassword">Forgot Your Password?</a>
+                    <a href="#" class="forgotPassword">Forgot Your Password?</a>
                     <hr class="bottomLoginBorder">
                     <div class="loginRegister">Don’t have an account? <a href="#" class="loginRegisterLink">Register</a>
                     </div>
@@ -78,15 +81,16 @@
                         <input type="password" name="passwordSignUp" id="passwordSignUp">
                     </fieldset>
                     <button type="submit" class="submitSignUp">Sign Up</button>
-                    <hr class="bottomRegisterBorder" >
-                    <div class="registerLogin">Already have an account? <a href="#" class="registerLoginLink">Log in</a></div>
+                    <hr class="bottomRegisterBorder">
+                    <div class="registerLogin">Already have an account? <a href="#" class="registerLoginLink">Log in</a>
+                    </div>
                 </form>
             </div>
         </div>
 
     </header>
     <main>
-        <div class="steps">
+        <div class="steps" id="steps">
             <h2>3 STEPS TO THE PERFECT TRIP</h2>
             <div>
                 <img src="./images/bike.svg" alt="Bike">
@@ -101,7 +105,7 @@
                 <p>We will give you recommendations</p>
             </div>
         </div>
-        <div class="popularDestinations">
+        <div class="popularDestinations" id="destinations">
             <h2>POPULAR DESTINATIONS</h2>
             <div class="sliderContainer">
                 <div class="sliderImg">
@@ -117,9 +121,10 @@
                     <div class="nextImgBtn"></div>
                 </div>
             </div>
-            <button class="findMoreButton"><img src="./images/bi_arrow-right.png" alt="Arrow right">Find More</button>
+            <button class="findMoreButton"><img src="./images/bi_arrow-right.png" alt="Arrow right">Find
+                More</button>
         </div>
-        <div class="stories">
+        <div class="stories" id="stories">
             <h2>TRAVEL STORIES</h2>
             <div class="Bg">
                 <img src="./images/storiesBg.jpg" alt="" class="storiesBg1440">
@@ -133,8 +138,10 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                         laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                        cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum
+                        dolor
                         sit amet, consectetur adipiscing elit...</p>
                     <a href="">Read More</a>
                 </div>
@@ -145,8 +152,10 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                         laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                        cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum
+                        dolor
                         sit amet, consectetur adipiscing elit...</p>
                     <a href="">Read More</a>
                 </div>
@@ -157,8 +166,10 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                         laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                        cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum
+                        dolor
                         sit amet, consectetur adipiscing elit...</p>
                     <a href="">Read More</a>
                 </div>
@@ -169,8 +180,10 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                         laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                        cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum
+                        dolor
                         sit amet, consectetur adipiscing elit...</p>
                     <a href="">Read More</a>
                 </div>
@@ -184,9 +197,9 @@
         <div class="footerWrapper">
             <span>All Rights Reserved © Travel Portal</span>
             <div class="socialNetwork">
-                <a href="" class="inst"></a>
-                <a href="" class="yourTube"></a>
-                <a href="" class="twitter"></a>
+                <a href="https://rs.school/js-stage0/" class="inst"></a>
+                <a href="https://github.com/JohanPeper" class="yourTube"></a>
+                <a href="https://github.com/JohanPeper" class="twitter"></a>
             </div>
         </div>
     </footer>

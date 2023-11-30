@@ -2,19 +2,56 @@ const loginBtn = document.querySelector('.loginBtn');
 const bgHide = document.querySelector('.bgHide');
 const registerLink = document.querySelector('.loginRegisterLink');
 const loginLink = document.querySelector('.registerLoginLink');
+const accountBtn = document.querySelector('.accountBtn');
+
+const scrollControl = {
+    enableScroll: function () {
+        // Удаляем обработчики событий, которые предотвращали прокрутку
+        window.removeEventListener('scroll', preventScroll);
+        window.removeEventListener('wheel', preventScroll);
+        window.removeEventListener('touchmove', preventScroll);
+
+        function preventScroll(e) {
+            e.preventDefault();
+            window.scrollTo(0, 0);
+        }
+    },
+
+    disableScroll: function () {
+        // Запрещаем прокрутку при событии прокрутки
+        window.addEventListener('scroll', preventScroll, { passive: false });
+
+        // Запрещаем прокрутку при событии колеса мыши
+        window.addEventListener('wheel', preventScroll, { passive: false });
+
+        // Запрещаем прокрутку при событии сенсорного ввода
+        window.addEventListener('touchmove', preventScroll, { passive: false });
+
+        function preventScroll(e) {
+            e.preventDefault();
+            window.scrollTo(0, 0);
+        }
+    }
+};
+
+
+
 
 loginBtn.onclick = () => {
     loginLink.onclick();
     document.querySelector('.bgHide').style.display = 'flex';
     document.querySelector('.loginFormWrapper').style.display = 'flex';
-    document.body.style.cssText = `overflow: hidden;`;
+    scrollControl.disableScroll();
 }
+
+accountBtn.addEventListener('click', function () {
+    loginBtn.onclick();
+});
 
 bgHide.onclick = () => {
     document.querySelector('.bgHide').style.display = 'none';
     document.querySelector('.loginFormWrapper').style.display = 'none';
-    document.body.style.cssText = `overflow: visible;`;
-
+    scrollControl.enableScroll();
 }
 
 registerLink.onclick = () => {
@@ -27,16 +64,47 @@ loginLink.onclick = () => {
     document.querySelector('.loginForm').style.display = 'block';
 }
 
+const signInBtn = document.querySelector('.submitSignIn');
+
+signInBtn.addEventListener('click', function () {
+    var email = document.getElementById("emailSignIn").value;
+    var password = document.getElementById("passwordSignIn").value;
+
+    alert("Вы вошли в систему с логином: " + email + " и паролем: " + password);
+});
+
+
 const burgerMenuBtn = document.querySelector('.burgerMenuBtn');
 const closeBurgerMenu = document.querySelector('.closeBurgerMenu');
 
 burgerMenuBtn.onclick = () => {
+    document.querySelector('.burgerMenuPopUp').style.animationName = 'ani';
     document.querySelector('.burgerMenuPopUp').style.display = 'flex';
 }
 
 closeBurgerMenu.onclick = () => {
-    document.querySelector('.burgerMenuPopUp').style.display = 'none';
+    document.querySelector('.burgerMenuPopUp').style.animationName = 'closeAni';
+    setTimeout(() => {
+        document.querySelector('.burgerMenuPopUp').style.display = 'none';
+    }, 2000);
+
 }
+
+const burgerLinks = document.querySelector('.burgerMenuPopUp');
+
+burgerLinks.addEventListener('click', function (e) {
+    if (e.target.tagName == 'A') {
+        return closeBurgerMenu.onclick();
+    }
+});
+
+document.addEventListener('click', function (e) {
+    if (e.target.className == 'burgerMenuPopUp' || e.target.className == 'burgerMenuBtn') {
+        return
+    } else { closeBurgerMenu.onclick() }
+});
+
+
 
 const firstSlide = document.querySelector('.firstSlide');
 const secondSlide = document.querySelector('.secondSlide');
@@ -132,3 +200,24 @@ nextImgBtn.onclick = () => {
         thirdSlide.onclick();
     }
 }
+
+document.addEventListener('click', function (e) {
+    if (e.target.className == 'next') {
+        if (secondSlide.classList.contains('activeSlide')) {
+            thirdSlide.onclick();
+        } else if (thirdSlide.classList.contains('activeSlide')) {
+            firstSlide.onclick();
+        } else {
+            secondSlide.onclick();
+        }
+    } else if (e.target.className == 'prev') {
+        if (secondSlide.classList.contains('activeSlide')) {
+            firstSlide.onclick();
+        } else if (thirdSlide.classList.contains('activeSlide')) {
+            secondSlide.onclick();
+        } else {
+            thirdSlide.onclick();
+        }
+    }
+
+})
