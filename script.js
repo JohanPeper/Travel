@@ -4,37 +4,15 @@ const registerLink = document.querySelector('.loginRegisterLink');
 const loginLink = document.querySelector('.registerLoginLink');
 const accountBtn = document.querySelector('.accountBtn');
 
+
 const scrollControl = {
-    enableScroll: function () {
-        // Удаляем обработчики событий, которые предотвращали прокрутку
-        window.removeEventListener('scroll', preventScroll);
-        window.removeEventListener('wheel', preventScroll);
-        window.removeEventListener('touchmove', preventScroll);
-
-        function preventScroll(e) {
-            e.preventDefault();
-            window.scrollTo(0, 0);
-        }
+    enableScroll() {
+        document.querySelector('html').style.cssText = 'overflow-y: visible';
     },
-
-    disableScroll: function () {
-        // Запрещаем прокрутку при событии прокрутки
-        window.addEventListener('scroll', preventScroll, { passive: false });
-
-        // Запрещаем прокрутку при событии колеса мыши
-        window.addEventListener('wheel', preventScroll, { passive: false });
-
-        // Запрещаем прокрутку при событии сенсорного ввода
-        window.addEventListener('touchmove', preventScroll, { passive: false });
-
-        function preventScroll(e) {
-            e.preventDefault();
-            window.scrollTo(0, 0);
-        }
+    disableScroll() {
+        document.querySelector('html').style.cssText = 'overflow-y: hidden';
     }
-};
-
-
+}
 
 
 loginBtn.onclick = () => {
